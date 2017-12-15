@@ -6,8 +6,8 @@
            <field name="inherit_id" ref="document_page.view_wiki_form"/>
             <field name="model">document.page</field>
             <field name="arch" type="xml">
-                
-                <xpath expr="//form[@string='Document Page']/sheet/group/group[1]/field[@name='parent_id']@name" position="after">
+
+                <xpath expr="//form[@string='Document Page']/sheet/group/group[1]/field[@name='parent_id']" position="after">
                     <field name="sequence_number"/>
                 </xpath>
 
