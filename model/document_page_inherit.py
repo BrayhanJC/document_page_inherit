@@ -33,4 +33,4 @@ class document_page(models.Model):
     _inherit = ['document.page']
     _description = "Document Page inherit"
 
-    sequence_number= fields.Integer('Secuencia', required=True, readonly=True)
+    sequence_number= fields.Integer('Secuencia', required=True)

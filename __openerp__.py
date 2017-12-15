@@ -21,7 +21,7 @@
 
 {
     'name': 'Document Page',
-    'version': '10.0',
+    'version': '8.0',
     'category': 'Knowledge Management',
     'description': """
 Pages
@@ -35,7 +35,7 @@ Web pages
         'document_page',
     ],
     'data': [
-        'document_page_view.xml',
+        'view/document_page_view_inherit.xml',
     ],
     'installable': True,
     'auto_install': False,
