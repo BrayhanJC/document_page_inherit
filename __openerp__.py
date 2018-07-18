@@ -36,6 +36,7 @@ Web pages
     ],
     'data': [
         'view/document_page_view_inherit.xml',
+        'view/document_page_view_tree_inherit.xml'
     ],
     'installable': True,
     'auto_install': False,

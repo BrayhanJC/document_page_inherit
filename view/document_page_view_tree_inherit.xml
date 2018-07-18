@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <!-- Extending document page Form View -->
+        <record id="view_document_page_inherit_tree" model="ir.ui.view">
+           <field name="inherit_id" ref="document_page.view_wiki_tree"/>
+            <field name="model">document.page</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//tree[@string='Document Page']" position="inside">
+                    <field name="sequence_number" invisible="1"/>
+                </xpath>
+
+
+                <xpath expr="//tree[@string='Document Page']" position="attributes">
+                    <attribute name="default_order">sequence_number</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</openerp>
