@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Document Page',
+    'name': 'Document Page Inherit',
     'version': '8.0',
     'category': 'Knowledge Management',
     'description': """
@@ -28,7 +28,7 @@ Pages
 =====
 Web pages
     """,
-    'author': ['Brayhan Jaramillo / Juan Zuluaga'],
+    'author': 'Brayhan Jaramillo / Juan Zuluaga',
     'website': 'http://www.openerp.com/',
     'license': 'AGPL-3',
     'depends': [
@@ -38,7 +38,9 @@ Web pages
         'view/document_page_view_inherit.xml',
         'view/document_page_view_tree_inherit.xml',
         'view/revelaciones_view.xml',
-        'view/revelaciones_contenido_view.xml'
+        'view/revelaciones_contenido_view.xml',
+        'report/revelaciones_report_view.xml',
+        'report/report.xml'
     ],
     'installable': True,
     'auto_install': False,

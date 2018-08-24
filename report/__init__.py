@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -9,8 +10,8 @@
 #    published by the Free Software Foundation, either version 3 of the
 #    License, or (at your option) any later version.
 #    
-#    Autor: Brayhan Andres Jaramillo Castaño
-#           Juan Camilo Zuluaga Serna
+# 	 Autor: Brayhan Andres Jaramillo Castaño
+#			Juan Camilo Zuluaga Serna
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,33 +22,5 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-import logging
-import difflib
-from openerp import models, fields, api, _
-import datetime
-from datetime import datetime
 
-_logger = logging.getLogger(__name__)
-
-
-class Revelaciones(models.Model):
-	_name = "revelaciones"
-	_rec_name= 'name'
-
-	_description = "Revelaciones"
-
-	year = fields.Char('Year', required=True)
-	date = fields.Date('Fecha', required=True)
-	name = fields.Char(u'Título',required=True)
-	content_ids = fields.One2many('revelaciones.contenido', 'revelaciones_id', 'Contenido')
-
-	@api.one
-	def copy(self, default=None):
-
-		default = dict(default or {})
-		default.update({
-			'name': self.name + " (copia)"
-			})
-		return super(Revelaciones, self).copy(default)
-
-Revelaciones()
+import revelaciones_report

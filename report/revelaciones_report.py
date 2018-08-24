@@ -8,9 +8,6 @@
 #    it under the terms of the GNU Affero General Public License as
 #    published by the Free Software Foundation, either version 3 of the
 #    License, or (at your option) any later version.
-#    
-#    Autor: Brayhan Andres Jaramillo Castaño
-#           Juan Camilo Zuluaga Serna
 #
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,33 +18,31 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-import logging
-import difflib
-from openerp import models, fields, api, _
-import datetime
-from datetime import datetime
 
+import datetime
+import pytz
+import time
+from openerp import tools
+from openerp.osv import osv
+from openerp.report import report_sxw
+import logging
 _logger = logging.getLogger(__name__)
 
 
-class Revelaciones(models.Model):
-	_name = "revelaciones"
-	_rec_name= 'name'
+class revelaciones_report(report_sxw.rml_parse):
 
-	_description = "Revelaciones"
 
-	year = fields.Char('Year', required=True)
-	date = fields.Date('Fecha', required=True)
-	name = fields.Char(u'Título',required=True)
-	content_ids = fields.One2many('revelaciones.contenido', 'revelaciones_id', 'Contenido')
+    def __init__(self, cr, uid, name, context):
+        super(revelaciones_report, self).__init__(cr, uid, name, context=context)
+        self.localcontext.update({
+            'time': time,
 
-	@api.one
-	def copy(self, default=None):
+        })
 
-		default = dict(default or {})
-		default.update({
-			'name': self.name + " (copia)"
-			})
-		return super(Revelaciones, self).copy(default)
+class report_revelaciones(osv.AbstractModel):
+    _name = 'report.document_page_inherit.revelaciones'
+    _inherit = 'report.abstract_report'
+    _template = 'document_page_inherit.report_revelaciones_id'
+    _wrapped_report_class = revelaciones_report
 
-Revelaciones()
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

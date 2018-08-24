@@ -28,10 +28,12 @@ from openerp import models, fields, api, _
 _logger = logging.getLogger(__name__)
 
 
-class document_page(models.Model):
+class RevelacionesContenido(models.Model):
     _name = "revelaciones.contenido"
     _description = "Contenido"
 
     sequence_content= fields.Integer('Secuencia')
     content= fields.Html('Contenido')
     revelaciones_id= fields.Many2one('revelaciones', 'Revelaciones')
+
+RevelacionesContenido()

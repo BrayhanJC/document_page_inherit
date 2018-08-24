@@ -49,7 +49,7 @@
 		</record>
 
 		<record id="action_revelaciones" model="ir.actions.act_window">
-		<field name="name">Revelaciones name</field>
+		<field name="name">Revelaciones</field>
 		<field name="type">ir.actions.act_window</field>
 		<field name="res_model">revelaciones</field>
 		<field name="view_type">form</field>
@@ -58,7 +58,7 @@
 
 		<menuitem
 		name="Revelaciones"
-		sequence="1"
+		sequence="100"
 		parent="account.menu_finance_reports"
 		action="action_revelaciones"
 		id="menu_revelaciones"/>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="report_revelaciones_id" name="Reporte Revelaciones">
+
+			<t t-call="report.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="report.external_layout">
+						<div class="page">
+
+							<p class="text-center"><center><h1> <strong><p t-esc="o.name"/></strong> </h1></center></p>
+							
+
+							<div class="col-xs-6" style="margin-left:">
+								<p> <strong><p t-esc="o.date"/></strong> <strong><p t-esc="o.year"/></strong>  </p>
+							</div>
+
+							<br/>
+							<br/>
+
+							<!-- class="table table-striped table-bordered table-condensed table-hover" -->
+							<table border="0" width="90%" >
+								<tbody>
+									<tr t-foreach="o.content_ids" t-as="val" class="border-white">
+										<td> <t t-raw="val.content"></t> </td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+					</t>
+				</t>
+			</t>
+
+
+
+
+
+<!--
+
+			<t t-call="report.external_layout">
+				<t t-foreach="docs" t-as="data">
+					<div class="page">
+						<p class="text-center"><center><h2> <strong><p t-esc="data.name"/></strong> </h2></center></p>
+						
+
+						<div class="col-xs-6" style="margin-left:">
+							<p> <strong><p t-esc="data.date"/></strong> <strong><p t-esc="data.year"/></strong>  </p>
+						</div>
+
+
+
+						<div class="col-xs-6" style="margin-left:">
+							<p> <strong><p t-esc="data.content_ids"/></strong> <strong><p t-esc="data.year"/></strong>  </p>
+						</div>
+
+					</div>
+				</t>
+			</t>
+
+			<br/>
+			<br/>
+
+
+
+
+
+			<t t-foreach='docs.content_ids' t-as='value'>
+			<t t-esc="value.content"/>,
+			</t>
+-->
+
+		</template>
+	</data>
+</openerp>
+
