@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<record id="view_revelaciones_contenido_form" model="ir.ui.view">
+			<field name="name">Revelaciones Contenido Form</field>
+			<field name="model">revelaciones.contenido</field>
+			<field name="arch" type="xml">
+				<form string="Revelaciones">
+					<group col='2'>
+						<field name="sequence_content"/>
+						<field name="content"/>
+						<field name="revelaciones_id" invisible="1"/>
+						
+					</group>
+				</form>
+			</field>
+		</record>
+
+
+		<record id="view_revelaciones_contenido_tree" model="ir.ui.view">
+			<field name="name">Revelaciones Contenido Tree</field>
+			<field name="model">revelaciones.contenido</field>
+			<field name="arch" type="xml">
+				<tree string="Revelaciones">
+					<field name="sequence_content"/>
+					<field name="content"/>
+					<field name="revelaciones_id" invisible="1"/>
+				</tree>
+			</field>
+		</record>
+
+
+
+	</data>
+</openerp>

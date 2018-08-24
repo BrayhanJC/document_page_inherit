@@ -24,3 +24,5 @@
 ##############################################################################
 
 import document_page_inherit
+import revelaciones
+import revelaciones_contenido
