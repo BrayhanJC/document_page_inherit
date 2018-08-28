@@ -2,9 +2,8 @@
 <openerp>
 	<data noupdate="1" >
 
-
 		<report
-			id="revelaciones_document_id"
+			id="revelaciones_documents_id"
 			model="revelaciones"
 			string="Imprimir"
 			report_type="qweb-pdf"
