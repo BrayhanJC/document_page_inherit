@@ -7,19 +7,19 @@
 			model="revelaciones"
 			string="Imprimir"
 			report_type="qweb-pdf"
-			name="document_page_inherit.report_revelaciones_id"
-			file="document_page_inherit.report_revelaciones_id"
+			name="document_page_inherit.reporte_revelaciones_id"
+			file="document_page_inherit.reporte_revelaciones_id"
 			menu="True"
 		/>
 
 
 		<report
-			id="revelaciones_report_ids"
+			id="revelaciones_reporte_id"
 			model="revelaciones"
-			string="Imprimir"
+			string="Imprimir Revelaciones"
 			report_type="qweb-pdf"
-			name="document_page_inherit.report_revelaciones_id"
-			file="document_page_inherit.report_revelaciones_id"
+			name="document_page_inherit.reporte_revelaciones_id"
+			file="document_page_inherit.reporte_revelaciones_id"
 			menu="True"
 		/>
 

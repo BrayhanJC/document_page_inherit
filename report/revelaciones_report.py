@@ -42,7 +42,7 @@ class revelaciones_report(report_sxw.rml_parse):
 class report_revelaciones(osv.AbstractModel):
     _name = 'report.document_page_inherit.revelaciones'
     _inherit = 'report.abstract_report'
-    _template = 'document_page_inherit.report_revelaciones_id'
+    _template = 'document_page_inherit.reporte_revelaciones_id'
     _wrapped_report_class = revelaciones_report
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
