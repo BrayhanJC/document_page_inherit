@@ -8,12 +8,15 @@
 					<t t-call="report.external_layout">
 						<div class="page">
 
-							<p class="text-center"><center><h1> <strong><p t-esc="o.name"/></strong> </h1></center></p>
-							
+							<br/>
 
-							<div class="col-xs-6" style="margin-left:">
-								<p> <strong><p t-esc="o.date"/></strong> <strong><p t-esc="o.year"/></strong>  </p>
-							</div>
+							<center>
+								<h1>
+									<strong>
+										<p t-esc="o.name"/>
+									</strong>
+								</h1>
+							</center>
 
 							<br/>
 							<br/>

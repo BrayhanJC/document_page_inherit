@@ -23,5 +23,4 @@
 #
 ##############################################################################
 
-import revelaciones_report
 import revelaciones_reporte

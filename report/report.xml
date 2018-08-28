@@ -2,32 +2,11 @@
 <openerp>
 	<data noupdate="1" >
 
-		<report
-			id="revelaciones_report_id"
-			model="revelaciones"
-			string="Imprimir"
-			report_type="qweb-pdf"
-			name="document_page_inherit.report_revelaciones_id"
-			file="document_page_inherit.report_revelaciones_id"
-			menu="True"
-		/>
-
-
-		<report
-			id="revelaciones_reporte_id"
-			model="revelaciones"
-			string="Imprimir Revelaciones"
-			report_type="qweb-pdf"
-			name="document_page_inherit.reporte_revelaciones_id"
-			file="document_page_inherit.reporte_revelaciones_id"
-			menu="True"
-		/>
-
 
 		<report
 			id="revelaciones_document_id"
 			model="revelaciones"
-			string="Imprimir Documento"
+			string="Imprimir"
 			report_type="qweb-pdf"
 			name="document_page_inherit.reporte_revelaciones_id"
 			file="document_page_inherit.reporte_revelaciones_id"
