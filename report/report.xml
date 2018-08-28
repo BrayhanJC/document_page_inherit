@@ -10,8 +10,6 @@
 			name="document_page_inherit.report_revelaciones_id"
 			file="document_page_inherit.report_revelaciones_id"
 			menu="True"
-			attachment_use="True"
-			attachment="object.name +'.pdf')"
 		/>
 
 	</data>
