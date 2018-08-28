@@ -40,6 +40,7 @@ Web pages
         'view/revelaciones_view.xml',
         'view/revelaciones_contenido_view.xml',
         'report/revelaciones_report_view.xml',
+        'report/revelaciones_reporte_view.xml',
         'report/report.xml'
     ],
     'installable': True,

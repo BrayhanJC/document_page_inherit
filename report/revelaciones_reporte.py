@@ -23,5 +23,30 @@
 #
 ##############################################################################
 
-import revelaciones_report
-import revelaciones_reporte
+import datetime
+import pytz
+import time
+from openerp import tools
+from openerp.osv import osv
+from openerp.report import report_sxw
+import logging
+_logger = logging.getLogger(__name__)
+
+
+class revelaciones_reporte(report_sxw.rml_parse):
+
+
+    def __init__(self, cr, uid, name, context):
+        super(revelaciones_reporte, self).__init__(cr, uid, name, context=context)
+        self.localcontext.update({
+            'time': time,
+
+        })
+
+class report_revelaciones(osv.AbstractModel):
+    _name = 'report.document_page_inherit.revelaciones'
+    _inherit = 'report.abstract_report'
+    _template = 'document_page_inherit.reporte_revelaciones_id'
+    _wrapped_report_class = revelaciones_reporte
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
