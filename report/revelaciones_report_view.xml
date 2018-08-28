@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-		<template id="reporte_revelaciones_id" name="Reporte Revelaciones">
+		<template id="report_revelaciones_id" name="Reporte Revelaciones">
 
 			<t t-call="report.html_container">
 				<t t-foreach="docs" t-as="o">
@@ -31,44 +31,6 @@
 					</t>
 				</t>
 			</t>
-
-
-
-
-
-<!--
-
-			<t t-call="report.external_layout">
-				<t t-foreach="docs" t-as="data">
-					<div class="page">
-						<p class="text-center"><center><h2> <strong><p t-esc="data.name"/></strong> </h2></center></p>
-						
-
-						<div class="col-xs-6" style="margin-left:">
-							<p> <strong><p t-esc="data.date"/></strong> <strong><p t-esc="data.year"/></strong>  </p>
-						</div>
-
-
-
-						<div class="col-xs-6" style="margin-left:">
-							<p> <strong><p t-esc="data.content_ids"/></strong> <strong><p t-esc="data.year"/></strong>  </p>
-						</div>
-
-					</div>
-				</t>
-			</t>
-
-			<br/>
-			<br/>
-
-
-
-
-
-			<t t-foreach='docs.content_ids' t-as='value'>
-			<t t-esc="value.content"/>,
-			</t>
--->
 
 		</template>
 	</data>

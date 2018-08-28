@@ -7,8 +7,8 @@
 			model="revelaciones"
 			string="Imprimir"
 			report_type="qweb-pdf"
-			name="document_page_inherit.reporte_revelaciones_id"
-			file="document_page_inherit.reporte_revelaciones_id"
+			name="document_page_inherit.report_revelaciones_id"
+			file="document_page_inherit.report_revelaciones_id"
 			menu="True"
 		/>
 
@@ -18,8 +18,8 @@
 			model="revelaciones"
 			string="Imprimir Revelaciones"
 			report_type="qweb-pdf"
-			name="document_page_inherit.reporte_revelaciones_id"
-			file="document_page_inherit.reporte_revelaciones_id"
+			name="document_page_inherit.report_revelaciones_id"
+			file="document_page_inherit.report_revelaciones_id"
 			menu="True"
 		/>
 
