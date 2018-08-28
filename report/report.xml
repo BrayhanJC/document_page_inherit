@@ -3,7 +3,7 @@
 	<data noupdate="1" >
 
 		<report
-			id="revelaciones_ids"
+			id="revelaciones_report_id"
 			model="revelaciones"
 			string="Imprimir"
 			report_type="qweb-pdf"

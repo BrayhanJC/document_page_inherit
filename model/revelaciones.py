@@ -36,7 +36,7 @@ class Revelaciones(models.Model):
 
 	_description = "Revelaciones"
 
-	year = fields.Char('Year', required=True)
+	year = fields.Char(u'Año', required=True)
 	date = fields.Date('Fecha', required=True)
 	name = fields.Char(u'Título',required=True)
 	content_ids = fields.One2many('revelaciones.contenido', 'revelaciones_id', 'Contenido')

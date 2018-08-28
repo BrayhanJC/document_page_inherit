@@ -23,7 +23,7 @@
 								<field name="content_ids">
 									<tree string="Payments">
 										<field name="sequence_content"/>
-										<field name="content"/>
+										<field name="content" widget="html"/>
 									</tree>
 								</field>
 							</page>
