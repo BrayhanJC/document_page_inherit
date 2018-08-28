@@ -12,5 +12,16 @@
 			menu="True"
 		/>
 
+
+		<report
+			id="revelaciones_report_ids"
+			model="revelaciones"
+			string="Imprimir"
+			report_type="qweb-pdf"
+			name="document_page_inherit.report_revelaciones_id"
+			file="document_page_inherit.report_revelaciones_id"
+			menu="True"
+		/>
+
 	</data>
 </openerp>
