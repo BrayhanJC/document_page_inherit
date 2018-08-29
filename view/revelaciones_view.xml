@@ -20,12 +20,7 @@
 					<group col='2'>
 						<notebook>
 							<page string="Revelaciones">
-								<field name="content_ids">
-									<tree string="Payments">
-										<field name="sequence_content"/>
-										<field name="content" widget="html"/>
-									</tree>
-								</field>
+								<field name="content_ids"/>
 							</page>
 						</notebook>
 					</group>

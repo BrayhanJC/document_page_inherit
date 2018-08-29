@@ -9,6 +9,7 @@
 				<form string="Revelaciones">
 					<group col='2'>
 						<field name="sequence_content"/>
+						<field name="name"/>
 						<field name="content" widget="html"/>
 						<field name="revelaciones_id" invisible="1"/>
 						
@@ -24,12 +25,12 @@
 			<field name="arch" type="xml">
 				<tree string="Revelaciones">
 					<field name="sequence_content"/>
-					<field name="content" widget="html"/>
+					<field name="name"/>
+					<field name="content" invisible="1"/>
 					<field name="revelaciones_id" invisible="1"/>
 				</tree>
 			</field>
 		</record>
-
 
 
 	</data>

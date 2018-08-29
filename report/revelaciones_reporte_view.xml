@@ -3,39 +3,62 @@
 	<data>
 		<template id="reporte_revelaciones_id" name="Reporte Revelaciones">
 
-			<t t-call="report.html_container">
+			<t t-call="document_page_inherit.template_report_revelaciones">
 				<t t-foreach="docs" t-as="o">
-					<t t-call="report.external_layout">
-						<div class="page">
+					<div class="page">
 
-							<br/>
+						<center>
+							<h1>
+								<strong>
+									<p t-esc="o.name"/>
+								</strong>
+							</h1>
+						</center>
 
-							<center>
-								<h1>
-									<strong>
-										<p t-esc="o.name"/>
-									</strong>
-								</h1>
-							</center>
+						<br/>
+						<br/>
 
-							<br/>
-							<br/>
+						<!-- class="table table-striped table-bordered table-condensed table-hover" -->
+						<table border="0" width="90%" >
+							<tbody>
+								<tr t-foreach="o.content_ids" t-as="val" class="border-white">
+									<td> <t t-raw="val.content"></t> </td>
+								</tr>
+							</tbody>
+						</table>
 
-							<!-- class="table table-striped table-bordered table-condensed table-hover" -->
-							<table border="0" width="90%" >
-								<tbody>
-									<tr t-foreach="o.content_ids" t-as="val" class="border-white">
-										<td> <t t-raw="val.content"></t> </td>
-									</tr>
-								</tbody>
-							</table>
-
-						</div>
-					</t>
+					</div>
 				</t>
 			</t>
 
 		</template>
+
+
+		<template id="template_report_revelaciones">
+
+			<t t-if="o and 'company_id' in o">
+				<t t-set="company" t-value="o.company_id"></t>
+			</t>
+			<t t-if="not o or not 'company_id' in o">
+				<t t-set="company" t-value="res_company"></t>
+			</t>
+
+			<t t-call="document_page_inherit.custom_header" />
+			<t t-raw="0" />
+			<t t-call="report.external_layout_footer" />
+		</template>
+
+
+		<template id="custom_header">
+			<div class="header">
+				<div class="row">
+					<div class="col-xs-3" style="width: 45%;float: left;">
+						<img src='/web/binary/company_logo' style="width:60%"/>
+					</div>
+				</div>
+			</div>
+		</template>
+
 	</data>
 </openerp>
 

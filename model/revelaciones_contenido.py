@@ -30,8 +30,10 @@ _logger = logging.getLogger(__name__)
 
 class RevelacionesContenido(models.Model):
     _name = "revelaciones.contenido"
+    _rec_name= 'name'
     _description = "Contenido"
 
+    name= fields.Char(u'Título', required=True)
     sequence_content= fields.Integer('Secuencia')
     content= fields.Html('Contenido')
     revelaciones_id= fields.Many2one('revelaciones', 'Revelaciones')

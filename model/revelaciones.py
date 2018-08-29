@@ -33,7 +33,6 @@ _logger = logging.getLogger(__name__)
 class Revelaciones(models.Model):
 	_name = "revelaciones"
 	_rec_name= 'name'
-
 	_description = "Revelaciones"
 
 	year = fields.Char(u'Año', required=True)
@@ -43,10 +42,21 @@ class Revelaciones(models.Model):
 
 	@api.one
 	def copy(self, default=None):
+		_logger.info('asasasasasa')
+		_logger.info(self)
+		_logger.info(self.content_ids)
+		content=[]
+
+		for x in self.content_ids:
+			_logger.info(x.content)
+
+			content.append((0,0,{'sequence_content': x.id, 'content':x.content, 'revelaciones_id':self.id}))
+
 
 		default = dict(default or {})
 		default.update({
-			'name': self.name + " (copia)"
+			'name': self.name + " (copia)",
+			'content_ids': content
 			})
 		return super(Revelaciones, self).copy(default)
 
